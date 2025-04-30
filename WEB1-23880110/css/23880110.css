@@ -1,0 +1,180 @@
+:root{
+    --web1-pink: #FA97C2;
+    --web1-blue: #2FA0D5;
+    --web1-green: #73C926;
+}
+
+body{
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Changa One', cursive;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 900;
+}
+
+#menu-header a{
+    display: block;
+    padding: 0 1.25rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Changa One', cursive;
+}
+
+#menu-header a.active{
+    color: var(--web1-blue);
+}
+
+#formSearch i{
+    color: var(--web1-green);
+}
+
+#formSearch input[type="text"]{
+    width: 8rem;
+}
+
+/* banner */
+.carousel-indicators {
+    list-style-type: none;
+}
+
+#banner{
+    background-image: url(../images/bg-banner.gif);
+}
+
+#banner > div{
+    background: url(../images/logo_bg.png) no-repeat left top, url(../images/search_bg.png) no-repeat right top;
+    padding: 5rem 0 3rem 0;
+}
+
+#banner a{
+    background-color: var(--web1-pink);
+    font-family: 'Changa One', cursive;
+    font-size: 2rem;
+}
+
+#banner .carousel-item {
+    min-height: 15rem;
+}
+#banner .carousel-indicators li {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.2rem;
+    border: none;
+    margin: 0 0.25rem;
+    position: relative;
+}
+
+#banner .carousel-indicators li span{
+    position: absolute;
+    width: 0.6rem;
+    height: 0.6rem;
+    top: 0.3rem;
+    left: 0.05rem;
+    border-radius: 0.6rem;
+    border: none;
+    margin: 0 0.25rem;
+    text-align: left;
+    text-indent: -9999px;
+}
+
+#banner .carousel-indicators li.active span{
+    background-color: var(--web1-green);
+}
+
+#banner-small{
+    background-image: url(../images/bg-banner.gif);
+    padding: 5px;
+}
+
+/* product */
+.readmore {
+    color: var(--web1-blue);
+    margin-top: -4px !important;
+}
+
+.web1-text-blue{
+    color: var(--web1-blue);
+}
+
+#aboutUs{
+    background-color: var(--web1-pink);
+}
+
+#formSignup{
+   border-style: dashed !important;
+   border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#about-us h4{
+    color: black;
+}
+
+
+/* news */
+#news .date{
+    background-color: var(--web1-green);
+    width: 6rem;
+    padding: 1rem;
+}
+
+footer{
+    background-image: url(../images/bg-footer.gif);
+}
+
+#menu-footer a{
+    color: white;
+    font-family: 'Changa One', cursive;
+    font-weight: bold;
+    display: block;
+    padding: 0 2rem;
+}
+
+#menu-footer a.active{
+    color: var(--web1-pink);
+}
+
+/* Modal Login */
+#formLogin button[type="submit"]{
+    background-color: var(--web1-blue);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Testimonials */
+#testimonials{
+    background-color: var(--web1-pink);
+}
+
+#testimonials .col{
+    background: url('../images/quot.png') left top no-repeat;
+    padding-left: 3rem;
+}
+
+/* Blog */
+#blogs-categories li{
+    list-style-type: none;
+    background: url('../images/marker1.png') 0 0.25rem no-repeat;
+    padding: 0 0 0.75rem 1.5rem;
+}
+
+/* Contracts */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.btn-primary{
+    background-color: var(--web1-blue) !important;
+    border: none;
+}
