@@ -20,6 +20,11 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- Web1 CSS -->
     <link rel="stylesheet" href="css/23880110.min.css" />
+
+    <!-- Google Recaptcha-->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeejSkrAAAAAGNd8LzPXNZx4qhmd80iXxsb7EVG"></script>
+
+    <script src="./js/onSubmit.js"></script>
 </head>
 
 <body>
@@ -116,7 +121,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                         </div>
                     </div>
                     <div class="col">
@@ -227,28 +232,28 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6Lczkx4rAAAAAAP6xRDIOmG12v_c504_l5w4zSMN"></script>
     <script>
         checkLogin();
-        function onSubmit(e) {
-            e.preventDefault();
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6Lczkx4rAAAAAAP6xRDIOmG12v_c504_l5w4zSMN', {action: 'submit'}).then(function(token) {
-                    let response = fetch('verify.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({'g-token': token})
-                    });
-                    if(response.status == 200){
-                        sendMail();
-                    } else{
-                        let responseMessage = document.getElementById('responseMessage');
-                        responseMessage.innerHTML = 'Error: Can not verify RECAPTCHA';
-                        responseMessage.className = 'text-danger';
-                    }
-                });
-            });
-        }
+        //function onSubmit(e) {
+        //     e.preventDefault();
+        //     grecaptcha.ready(function() {
+        //         grecaptcha.execute('6Lczkx4rAAAAAAP6xRDIOmG12v_c504_l5w4zSMN', {action: 'submit'}).then(function(token) {
+        //             let response = fetch('verify.php', {
+        //                 method: 'POST',
+        //                 headers: {
+        //                     'Content-Type': 'application/json',
+        //                     'Accept': 'application/json'
+        //                 },
+        //                 body: JSON.stringify({'g-token': token})
+        //             });
+        //             if(response.status == 200){
+        //                 sendMail();
+        //             } else{
+        //                 let responseMessage = document.getElementById('responseMessage');
+        //                 responseMessage.innerHTML = 'Error: Can not verify RECAPTCHA';
+        //                 responseMessage.className = 'text-danger';
+        //             }
+        //         });
+        //     });
+        // }
 
         async function sendMail() {
             let responseMessage = document.getElementById('responseMessage');

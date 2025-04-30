@@ -1,7 +1,11 @@
+const CAPTCHA_SITE_KEY = '6LeejSkrAAAAAGNd8LzPXNZx4qhmd80iXxsb7EVG';
+const CAPTCHA_API_KEY = 'AIzaSyC3zQ347OKKSm3xVbzjiLSUoDOuQxJToFs';
+const CAPTCHA_PROJECT_ID = 'web1-23880110';
+
 function onSubmit(e) {
     e.preventDefault();
 
-    let responseMessage = document.getElementById('response');
+    let responseMessage = document.getElementById('responseMessage');
     responseMessage.className = 'text-success';
     responseMessage.innerHTML = '';
 
