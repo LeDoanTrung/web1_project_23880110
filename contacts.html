@@ -232,28 +232,6 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6Lczkx4rAAAAAAP6xRDIOmG12v_c504_l5w4zSMN"></script>
     <script>
         checkLogin();
-        //function onSubmit(e) {
-        //     e.preventDefault();
-        //     grecaptcha.ready(function() {
-        //         grecaptcha.execute('6Lczkx4rAAAAAAP6xRDIOmG12v_c504_l5w4zSMN', {action: 'submit'}).then(function(token) {
-        //             let response = fetch('verify.php', {
-        //                 method: 'POST',
-        //                 headers: {
-        //                     'Content-Type': 'application/json',
-        //                     'Accept': 'application/json'
-        //                 },
-        //                 body: JSON.stringify({'g-token': token})
-        //             });
-        //             if(response.status == 200){
-        //                 sendMail();
-        //             } else{
-        //                 let responseMessage = document.getElementById('responseMessage');
-        //                 responseMessage.innerHTML = 'Error: Can not verify RECAPTCHA';
-        //                 responseMessage.className = 'text-danger';
-        //             }
-        //         });
-        //     });
-        // }
 
         async function sendMail() {
             let responseMessage = document.getElementById('responseMessage');
